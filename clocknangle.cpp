@@ -1,10 +1,10 @@
  #include<stdio.h>
  #include<iostream>
- using namespace std;
+  using namespace std;
   
   int main()
   {
-    int i,n,h,m;
+    int i,n,h,m,a;
     int hr[n+1];
     int min[n+1];
     cin>>n;
@@ -16,11 +16,22 @@
       h=hr[i]*30+(0.5*min[i]);
       m=min[i]*6;
       
-      if(h>m)
-        cout<<h-m<<"\n";
-      else
-        cout<<m-h<<"\n";
+      if(h>m){
+        a=h-m;
+        if(a>180)
+          cout<<360-a<<"\n";
+        else
+        cout<<a<<"\n";
+      }
+      else{
+       a=m-h;
+       if(a>180)
+          cout<<360-a<<"\n";
+        else
+        cout<<a<<"\n";
+      }
     }
     
     return 0;
   }
+        
