@@ -16,7 +16,6 @@ int main()
             b = b - a;
         }
     }
-
     cout << a << "\n";
     return 0;
 }
